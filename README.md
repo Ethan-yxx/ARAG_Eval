@@ -20,8 +20,6 @@ Recent advancements in Large Language Models (LLMs) have significantly impacted 
   </tr>
 </table>
 
-<img src="figs/fig4.png" width="400" alt="Chart 1" /> <img src="figs/fig5.png" width="400" alt="Chart 2" />
-
 ## Data
 - `arag_results.xlsx`: Responses of ARAG, MS Copilot, and Perplexity over 50 queries (Chinese). 
 - `arag_results_en.xlsx`: Responses of ARAG, MS Copilot, and Perplexity in English traslated via ERNIE Bot 4.0. 
