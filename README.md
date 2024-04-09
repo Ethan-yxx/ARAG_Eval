@@ -8,13 +8,13 @@ Recent advancements in Large Language Models (LLMs) have significantly impacted 
 
 ## Results
 <p float="left">
-  <img src="figs/fig4.png" width="500" />
+  <img src="figs/fig4.png" width="400" />
   <br>
   <em>Comparison of ARAG results with Microsoft Copilot and Perplexity.</em>
 </p>
 
 <p float="left">
-  <img src="figs/fig5.png" width="500" />
+  <img src="figs/fig5.png" width="400" />
   <br>
   <em>Ablation study of ARGA.</em>
 </p>
