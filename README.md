@@ -10,11 +10,11 @@ Recent advancements in Large Language Models (LLMs) have significantly impacted 
 <table border="0" style="border: none;">
   <tr>
     <td>
-      <img src="figs/fig4.png" width="400" alt="Chart 1" /><br />
+      <img src="figs/fig4.png" width="500" alt="Chart 1" /><br />
       <em>Comparison of ARAG with Microsoft Copilot and Perplexity.</em>
     </td>
     <td style="padding-left: 20px;">
-      <img src="figs/fig5.png" width="400" alt="Chart 2" /><br />
+      <img src="figs/fig5.png" width="500" alt="Chart 2" /><br />
       <em>Ablation study of ARAG.</em>
     </td>
   </tr>
