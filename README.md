@@ -22,7 +22,11 @@ Recent advancements in Large Language Models (LLMs) have significantly impacted 
 
 ## Data
 - `arag_results.xlsx`: Responses of ARAG, MS Copilot, and Perplexity over 50 queries (Chinese). 
-- `arag_results_en.xlsx`: Responses of ARAG, MS Copilot, and Perplexity in English traslated via ERNIE Bot 4.0. 
+- `arag_results_en.xlsx`: Responses of ARAG, MS Copilot, and Perplexity in English traslated via ERNIE Bot 4.0.
+- `negative_sample_results_arag.xlsx`: Responses of ARAG over 20 queries with misleading information.
+- `negative_sample_results_copilot.xlsx`: Responses of MS Copilot over 20 queries with misleading information. 
+- `negative_sample_results_perplexity.xlsx`: Responses of Perplexity over 20 queries with misleading information. 
+
 ## Result Files
 - `arag_results.xlsx`: Evaluation results ARAG, MS Copilot, and Perplexity over 50 queries and 10 realizations.
 - `average_scores.csv`: Average socres of ARAG, MS Copilot, and Perplexity over 50 queries. 
