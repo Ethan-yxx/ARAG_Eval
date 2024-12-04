@@ -1,3 +1,11 @@
+<!--
+ * @Author: Ethan-yxx ethan_yx@hotmail.com
+ * @Date: 2024-12-04 16:16:29
+ * @LastEditors: Ethan-yxx ethan_yx@hotmail.com
+ * @LastEditTime: 2024-12-04 17:42:17
+ * @FilePath: /ARAG_Eval/README.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <div align="center">
   <h1 align="center">ARAG: Analysis and Retrieval Augmented Generation for Comprehensive Reasoning over Socioeconomic Data (Performance Evaluation)
 </h1>
@@ -21,12 +29,8 @@ Recent advancements in Large Language Models (LLMs) have significantly impacted 
 </table>
 
 ## Data
-- `arag_results.xlsx`: Responses of ARAG, MS Copilot, and Perplexity over 50 queries (Chinese). 
-- `arag_results_en.xlsx`: Responses of ARAG, MS Copilot, and Perplexity in English traslated via ERNIE Bot 4.0.
-- `negative_sample_results_arag.xlsx`: Responses of ARAG over 20 queries with misleading information.
-- `negative_sample_results_copilot.xlsx`: Responses of MS Copilot over 20 queries with misleading information. 
-- `negative_sample_results_perplexity.xlsx`: Responses of Perplexity over 20 queries with misleading information. 
+- `arag_results.xlsx`: Responses of ARAG, ChatGPT-4o Search, and Perplexity over 50 queries.
+- `negative_sample.xlsx`: Responses of ARAG, ChatGPT-4o Search, and Perplexity over 20 queries with misleading information.
 
 ## Result Files
-- `arag_results.xlsx`: Evaluation results ARAG, MS Copilot, and Perplexity over 50 queries and 10 realizations.
-- `average_scores.csv`: Average socres of ARAG, MS Copilot, and Perplexity over 50 queries. 
+- `average_scores.csv`: Average socres of ARAG, ChatGPT-4o Search, and Perplexity over 50 queries. 
