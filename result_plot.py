@@ -50,7 +50,7 @@ def process_data_and_plot(input_excel, output_csv, fig_path):
     final_df = pd.DataFrame()
 
     # Iterate through each evaluation result column
-    for i in range(1, 11):  # Assuming 10 evaluations
+    for i in range(0, 5):  # Assuming 10 evaluations
         column_name = f"Evaluation Results_{i}"
         for j, json_str in enumerate(df[column_name]):
             if pd.notna(json_str):
@@ -58,7 +58,7 @@ def process_data_and_plot(input_excel, output_csv, fig_path):
                 final_df = pd.concat([final_df, temp_df], ignore_index=True)
     
     # Convert 'Value' to integer
-    final_df['Value'] = final_df['Value'].astype('int')
+    final_df['Value'] = final_df['Value'].astype('float')
     
     # Calculate and save average scores
     average_scores = final_df.groupby(['Answer Type', 'Dimension'])['Value'].mean().reset_index()
@@ -84,10 +84,10 @@ def plot_results(df, base_fig_path):
     palette_specific = {'C': '#504fa5', 'D': '#6f9de3', 'E': '#92dbed'}
 
     # Plot for Answer Types A, B, C
-    plot_evaluation_scores(df[df['Answer Type'].isin(['A', 'B', 'C'])], palette_general, base_fig_path, "fig4.png", ['C', 'A', 'B'], ['ARAG', 'Copilot', 'Perplexity'])
+    plot_evaluation_scores(df[df['Answer Type'].isin(['A', 'B', 'C'])], palette_general, base_fig_path, "fig4.png", ['C', 'B', 'A'], ['ARAG',  'Perplexity', 'ChatGPT-4o Search'])
 
     # Plot for Answer Types C, D, E
-    plot_evaluation_scores(df[df['Answer Type'].isin(['C', 'D', 'E'])], palette_specific, base_fig_path, "fig5.png", ['C', 'D', 'E'], ['ARAG', 'w/o RAG', 'w/o A'])
+    plot_evaluation_scores(df[df['Answer Type'].isin(['C', 'D', 'E'])], palette_specific, base_fig_path, "fig5.png", ['C', 'E', 'D'], ['ARAG', 'w/o A', 'w/o RAG'])
 
 def plot_evaluation_scores(filtered_df, palette, base_fig_path, fig_name, categories, legend_labels):
     """
@@ -105,13 +105,13 @@ def plot_evaluation_scores(filtered_df, palette, base_fig_path, fig_name, catego
     filtered_df['Answer Type'] = pd.Categorical(filtered_df['Answer Type'], categories)
 
     # Create and configure the plot
-    plt.figure(figsize=(14, 8))
+    plt.figure(figsize=(12, 8))
     sns.barplot(x='Dimension', y='Value', hue='Answer Type', data=filtered_df, palette=palette, edgecolor='none', ci=None)
-    plt.xlabel('Dimension', fontsize=16)
-    plt.ylabel('Mean Score (0-5)', fontsize=16)
-    plt.xticks(fontsize=14)
-    plt.yticks(fontsize=14)
-    plt.legend(labels=legend_labels, frameon=False, fontsize=14)
+    plt.xlabel('Dimension', fontsize=20)
+    plt.ylabel('Mean Score (0-5)', fontsize=20)
+    plt.xticks(fontsize=18)
+    plt.yticks(fontsize=18)
+    plt.legend(labels=legend_labels, frameon=False, fontsize=18, ncol=3, loc='upper center', bbox_to_anchor=(0.5, 1.15))  # Single row legend
 
     sns.despine()  # Remove plot spines
     plt.tight_layout()  # Adjust layout to not cut off labels
@@ -119,7 +119,7 @@ def plot_evaluation_scores(filtered_df, palette, base_fig_path, fig_name, catego
     plt.close()  # Close plot to free up memory
 
 if __name__ == '__main__':
-    input_excel = './results/arag_results.xlsx'
+    input_excel = './results/evaluated_results_20241107_145115_eb.xlsx'
     output_csv = './results/average_scores.csv'
     fig_path = './figs'
     process_data_and_plot(input_excel, output_csv, fig_path)
